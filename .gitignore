@@ -2,3 +2,6 @@
 /src/WebPack/bin
 /src/WebPack/obj
 /.vs
+/src/.vs
+/src/WebPack.CoreLib/obj
+/src/WebPack.CoreLib/bin
