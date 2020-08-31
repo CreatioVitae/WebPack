@@ -8,7 +8,7 @@
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
     <Company>Vitae</Company>
     <Authors>Vitae</Authors>
-    <Version>0.4.2-beta</Version>
+    <Version>0.5.1-beta</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>ASP.NET Core Web Pack For .NET Core;
 Include Default Builder;</Description>
