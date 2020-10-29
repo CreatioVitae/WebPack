@@ -10,6 +10,7 @@ namespace Microsoft.Extensions.Configuration {
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("appsettings.json")
                     .AddJsonFile($"appsettings.{DefaultEnvironment.GetEnvironmentName()}.json")
+                    .AddEnvironmentVariables()
                     .Build();
 
             return new LoggerConfiguration().ReadFrom.Configuration(CreateDefaultConfigurationRoot(configurationBuilder)).CreateLogger();
