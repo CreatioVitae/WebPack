@@ -4,16 +4,16 @@ using System.IO;
 
 namespace Microsoft.Extensions.Configuration {
     public static class ConfigurationBuilderExtensions {
-        public static ILogger CreateDefaultLogger(this ConfigurationBuilder configurationBuilder) {
-            static IConfigurationRoot CreateDefaultConfigurationRoot(ConfigurationBuilder configurationBuilder) =>
-                configurationBuilder
-                    .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("appsettings.json")
-                    .AddJsonFile($"appsettings.{DefaultEnvironment.GetEnvironmentName()}.json")
-                    .AddEnvironmentVariables()
-                    .Build();
+        //Note:https://github.com/serilog/serilog-aspnetcore/blob/dev/samples/EarlyInitializationSample/Program.cs
+        public static IConfigurationRoot CreateDefaultConfiguration(ConfigurationBuilder configurationBuilder) =>
+            configurationBuilder
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{DefaultEnvironment.GetEnvironmentName()}.json", optional: true)
+                .AddEnvironmentVariables()
+                .Build();
 
-            return new LoggerConfiguration().ReadFrom.Configuration(CreateDefaultConfigurationRoot(configurationBuilder)).CreateLogger();
-        }
+        public static ILogger CreateDefaultLogger(this ConfigurationBuilder configurationBuilder) =>
+            new LoggerConfiguration().ReadFrom.Configuration(CreateDefaultConfiguration(configurationBuilder)).CreateLogger();
     }
 }
