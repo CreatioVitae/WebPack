@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <ApplicationIcon />
     <OutputType>Library</OutputType>
     <StartupObject />
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
     <Company>Vitae</Company>
     <Authors>Vitae</Authors>
-    <Version>0.7.2-beta</Version>
+    <Version>0.8.1-beta</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>ASP.NET Core Web Pack For .NET Core;
 Include Default Builder;</Description>
@@ -19,8 +19,8 @@ Include Default Builder;</Description>
   </PropertyGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Serilog" Version="2.9.0" />
-    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
     <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
     <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="8.4.1" />
     <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
