@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Microsoft.AspNetCore.Hosting {
     public static class DefaultEnvironmentNames {
@@ -12,8 +12,7 @@ namespace Microsoft.AspNetCore.Hosting {
     }
 
     public static class DefaultEnvironment {
-        public static string GetEnvironmentName() {
-            return Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? DefaultEnvironmentNames.Production;
-        }
+        public static string GetEnvironmentName() =>
+            Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? DefaultEnvironmentNames.Production;
     }
 }
