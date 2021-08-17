@@ -4,36 +4,37 @@ using System.Net.Http.Headers;
 
 namespace Microsoft.AspNetCore.Authentication {
     public static class HttpRequestExtensions {
+        const int userNameIndex = 0;
+        const int passwordIndex = 1;
+
         public static bool TryGetBasicAuthenticationCredential(this HttpRequest request, out string? userName, out string? password) {
-            if (request.Headers.ContainsKey("Authorization") is false) {
+            static bool CreateFailResult(out string? userName, out string? password) {
                 userName = null;
                 password = null;
                 return false;
+            }
+
+            if (request.Headers.ContainsKey("Authorization") is false) {
+                return CreateFailResult(out userName, out password);
             }
 
             if (AuthenticationHeaderValue.TryParse(request.Headers["Authorization"], out var authHeader) is false) {
-                userName = null;
-                password = null;
-                return false;
+                return CreateFailResult(out userName, out password);
             };
 
-            if (authHeader.Parameter is not string || authHeader.Parameter.TryDecodeUtf8FromBase64String(out var credentialStringForBasicAuth) is false) {
-                userName = null;
-                password = null;
-                return false;
+            if (authHeader.Parameter is null || authHeader.Parameter.TryDecodeUtf8FromBase64String(out var decodedCredential) is false) {
+                return CreateFailResult(out userName, out password);
             }
 
-            var credential = credentialStringForBasicAuth.Split(new[] { ':' }, 2);
-
-            if (credential.Length != 2) {
-                userName = null;
-                password = null;
-                return false;
+            if (decodedCredential.Split(new[] { ':' }, 2) is not string[] credential || credential.Length is not 2) {
+                return CreateFailResult(out userName, out password);
             }
 
-            userName = credential[0];
-            password = credential[1];
+            userName = credential[userNameIndex];
+            password = credential[passwordIndex];
             return true;
+
+
         }
 
     }
