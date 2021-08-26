@@ -3,12 +3,13 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.1.0-beta</Version>
+    <Version>0.1.3-beta</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
     <Description>ASP.NET Core Identity Easy setting Package</Description>
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
+    <PackageReleaseNotes>repair IBasicAuthenticationService Api Signature...</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
