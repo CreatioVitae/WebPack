@@ -3,20 +3,24 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.2.2-beta</Version>
+    <Version>0.3.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
     <Description>ASP.NET Core Identity Easy setting Package</Description>
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
-    <PackageReleaseNotes>repair IBasicAuthenticationService Api Signature...
-add DefaultBasicAuthenticationHandler...</PackageReleaseNotes>
-    <AssemblyVersion>0.2.2.0</AssemblyVersion>
+    <PackageReleaseNotes>update BclExtensionPack...
+add ReadMe...</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>basic-authentication-setup-support</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="BclExtensionPack.CoreLib" Version="0.8.6-beta" />
+    <PackageReference Include="BclExtensionPack.CoreLib" Version="0.9.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
