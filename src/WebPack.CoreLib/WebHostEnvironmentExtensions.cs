@@ -1,8 +1,5 @@
-using Microsoft.AspNetCore.Hosting;
-
-namespace WebPack {
-    public static class WebHostEnvironmentExtensions {
-        public static bool IsDevelopmentRemote(this IWebHostEnvironment webHostEnvironment) =>
-            webHostEnvironment.EnvironmentName == DefaultEnvironmentNames.DevelopmentRemote;
-    }
+namespace WebPack;
+public static class WebHostEnvironmentExtensions {
+    public static bool IsDevelopmentRemote(this IWebHostEnvironment webHostEnvironment) =>
+        webHostEnvironment.EnvironmentName == DefaultEnvironmentNames.DevelopmentRemote;
 }
