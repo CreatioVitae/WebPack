@@ -1,35 +1,34 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-    
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <Nullable>enable</Nullable>
-        <ImplicitUsings>true</ImplicitUsings>
-        <Version>0.9.10</Version>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Authors>Vitae</Authors>
-        <Company>Vitae</Company>
-        <Description>
-            ASP.NET Core Web Pack For .NET Core;
-            Include Default Builder;
-        </Description>
-        <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
-        <PackageReleaseNotes>update DotNet 6...</PackageReleaseNotes>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageTags>Include Default Builder For DotNet Core</PackageTags>
-    </PropertyGroup>
-    <ItemGroup>
-        <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    </ItemGroup>
-    <ItemGroup>
-        <PackageReference Include="Serilog" Version="2.10.0" />
-        <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
-        <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
-        <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="8.4.1" />
-        <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
-        <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
-        <PackageReference Include="Serilog.Sinks.GoogleCloudLogging" Version="3.6.0" />
-    </ItemGroup>
-    <ItemGroup>
-        <None Include="docs\README.md" Pack="true" PackagePath="\" />
-    </ItemGroup>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>0.9.10</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Vitae</Authors>
+    <Company>Vitae</Company>
+    <Description>
+      ASP.NET Core Web Pack For .NET Core;
+      Include Default Builder;
+    </Description>
+    <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
+    <PackageReleaseNotes>update DotNet 6...</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>Include Default Builder For DotNet Core</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+    <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="8.4.1" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.GoogleCloudLogging" Version="3.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 </Project>
