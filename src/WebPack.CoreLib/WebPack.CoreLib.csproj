@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.9.13</Version>
+    <Version>0.9.14.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
@@ -12,7 +12,7 @@
       Include Default Builder;
     </Description>
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
-    <PackageReleaseNotes>update DotNet 6...</PackageReleaseNotes>
+    <PackageReleaseNotes>add ConfigureSettings</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>Include Default Builder For DotNet Core</PackageTags>
   </PropertyGroup>
