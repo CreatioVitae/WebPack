@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Vitae</Authors>
+    <Company>Vitae</Company>
+    <Description>
+      ASP.NET Core Gcp Extension Pack;
+    </Description>
+        <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
+    <PackageReleaseNotes>add PathBaseExtensions</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>Include Default Builder For Gcp Asp.NET Core</PackageTags>    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>
