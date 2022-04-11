@@ -1,6 +1,6 @@
 namespace Microsoft.AspNetCore.Http;
 
-public static class PathBaseExtensions {
+public static class PathStringExtensions {
     static readonly char[] Slash = { '/' };
 
     public static string WithoutLeadingSlash(this PathString pathString, bool forceWithTrailingSlash) {
