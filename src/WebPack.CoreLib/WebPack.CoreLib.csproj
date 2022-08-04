@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.9.17</Version>
+    <Version>0.9.18</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
@@ -21,13 +21,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Serilog" Version="2.11.0" />
-    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
     <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
     <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="8.4.1" />
     <PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
-    <PackageReference Include="Serilog.Sinks.GoogleCloudLogging" Version="4.0.0" />
-    <PackageReference Include="BclExtensionPack.CoreLib" Version="0.9.16" />
+    <PackageReference Include="Serilog.Sinks.GoogleCloudLogging" Version="5.0.0" />
+    <PackageReference Include="BclExtensionPack.CoreLib" Version="0.9.17" />
   </ItemGroup>
   <ItemGroup>
     <None Include="docs\README.md" Pack="true" PackagePath="\" />
