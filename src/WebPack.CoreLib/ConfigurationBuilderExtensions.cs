@@ -7,7 +7,7 @@ public static class ConfigurationBuilderExtensions {
         configurationBuilder
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            .AddJsonFile($"appsettings.{DefaultEnvironment.GetEnvironmentName()}.json", optional: true)
+            .AddJsonFile($"appsettings.{DefaultWebEnvironment.WebApps.GetEnvironmentName()}.json", optional: true)
             .AddEnvironmentVariables()
             .Build();
 
