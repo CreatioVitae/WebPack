@@ -1,15 +1,17 @@
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using System.ComponentModel.DataAnnotations;
 
+// ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection;
 public static class OptionsConfigurationServiceCollectionExtensions {
     public static IServiceCollection ConfigureIfDevelopment<TOptions>(this IServiceCollection serviceDescriptors, IConfigurationSection configurationSection) where TOptions : class =>
-        DefaultEnvironment.GetEnvironmentName() != DefaultEnvironmentNames.Development
+        DefaultWebEnvironment.WebApps.GetEnvironmentName() != DefaultEnvironmentNames.Development
         ? serviceDescriptors
         : serviceDescriptors.Configure<TOptions>(configurationSection);
 
     public static IServiceCollection AddOptionsIfDevelopment<TOptions>(this IServiceCollection serviceDescriptors, IConfigurationSection configurationSection) where TOptions : class {
-        if (DefaultEnvironment.GetEnvironmentName() != DefaultEnvironmentNames.Development) {
+        if (DefaultWebEnvironment.WebApps.GetEnvironmentName() != DefaultEnvironmentNames.Development) {
             return serviceDescriptors;
         }
 
