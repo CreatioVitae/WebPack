@@ -1,5 +1,6 @@
 using Serilog;
 
+// ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.Configuration;
 public static class ConfigurationBuilderExtensions {
     //Note:https://github.com/serilog/serilog-aspnetcore/blob/dev/samples/EarlyInitializationSample/Program.cs

@@ -3,10 +3,10 @@ using static Microsoft.AspNetCore.Authentication.HttpHeaderConsts;
 
 namespace Microsoft.AspNetCore.Authentication;
 public static class BasicAuthenticationExtensions {
-    const int userNameIndex = 0;
-    const int passwordIndex = 1;
-    const int credentialValidCount = 2;
-    const char credentialSeparateMarker = ':';
+    const int UserNameIndex = 0;
+    const int PasswordIndex = 1;
+    const int CredentialValidCount = 2;
+    const char CredentialSeparateMarker = ':';
 
     public static bool TryGetBasicAuthenticationCredential(this HttpRequest request, [NotNullWhen(true)] out string? userName, [NotNullWhen(true)] out string? password) {
         userName = null;
@@ -36,12 +36,12 @@ public static class BasicAuthenticationExtensions {
             return false;
         }
 
-        if (decodedCredential.Split(new[] { credentialSeparateMarker }, credentialValidCount) is not string[] credential || credential.Length is not credentialValidCount) {
+        if (decodedCredential.Split(new[] { CredentialSeparateMarker }, CredentialValidCount) is not string[] credential || credential.Length is not CredentialValidCount) {
             return false;
         }
 
-        userName = credential[userNameIndex];
-        password = credential[passwordIndex];
+        userName = credential[UserNameIndex];
+        password = credential[PasswordIndex];
         return true;
     }
 

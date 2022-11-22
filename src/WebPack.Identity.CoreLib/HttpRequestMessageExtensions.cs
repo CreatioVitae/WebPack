@@ -1,5 +1,6 @@
 using System.Net.Http.Headers;
 
+// ReSharper disable once CheckNamespace
 namespace System.Net.Http;
 public static class HttpRequestMessageExtensions {
     public static HttpRequestMessage ApplyBasicAuthorizationHeader(this HttpRequestMessage requestMessage, (string userName, string password) credential) {
