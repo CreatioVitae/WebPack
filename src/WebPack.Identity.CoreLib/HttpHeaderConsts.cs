@@ -1,3 +1,4 @@
+// ReSharper disable once CheckNamespace
 namespace Microsoft.AspNetCore.Authentication;
 public static class HttpHeaderConsts {
     public const string AuthorizationHeaderKey = "Authorization";
