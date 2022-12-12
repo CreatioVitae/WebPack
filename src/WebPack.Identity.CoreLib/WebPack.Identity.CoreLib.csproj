@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.4.16</Version>
+    <Version>0.5.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
     <Description>ASP.NET Core Identity Easy setting Package</Description>
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
-    <PackageReleaseNotes>update Nuget Package...</PackageReleaseNotes>
+    <PackageReleaseNotes>Add getBasicAuthenticationCredentialsInterrupt parameter in TryGetBasicAuthenticationCredential.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>basic-authentication-setup-support</PackageTags>
   </PropertyGroup>

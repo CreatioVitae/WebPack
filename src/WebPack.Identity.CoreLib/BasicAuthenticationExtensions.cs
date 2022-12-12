@@ -1,6 +1,7 @@
 using System.Net.Http.Headers;
 using static Microsoft.AspNetCore.Authentication.HttpHeaderConsts;
 
+// ReSharper disable once CheckNamespace
 namespace Microsoft.AspNetCore.Authentication;
 public static class BasicAuthenticationExtensions {
     const int UserNameIndex = 0;
@@ -8,11 +9,17 @@ public static class BasicAuthenticationExtensions {
     const int CredentialValidCount = 2;
     const char CredentialSeparateMarker = ':';
 
-    public static bool TryGetBasicAuthenticationCredential(this HttpRequest request, [NotNullWhen(true)] out string? userName, [NotNullWhen(true)] out string? password) {
+    public static bool TryGetBasicAuthenticationCredential(this HttpRequest request, [NotNullWhen(true)] out string? userName, [NotNullWhen(true)] out string? password, Func<HttpRequest, (bool interruptResult, string? userName, string? password)>? getBasicAuthenticationCredentialsInterrupt = null) {
         userName = null;
         password = null;
+        var interruptResult = false;
+
+        if (getBasicAuthenticationCredentialsInterrupt is not null) {
+            (interruptResult, userName, password) = getBasicAuthenticationCredentialsInterrupt(request);
+        }
 
         return
+            interruptResult ||
             request.Headers.ContainsAuthorizationHeader() &&
             request.Headers.TryGetAuthorizationHeader(out var authHeader) &&
             authHeader.IsBasicAuthentication() &&
