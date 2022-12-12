@@ -12,7 +12,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebPack.CoreLib", "src\WebP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebPack.Identity.CoreLib", "src\WebPack.Identity.CoreLib\WebPack.Identity.CoreLib.csproj", "{277B04E9-89DE-4DBF-8B02-F5ED3B394F0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPack.Gcp.CoreLib", "src\WebPack.Gcp.CoreLib\WebPack.Gcp.CoreLib.csproj", "{89D19D97-F993-4F9B-A232-2717BCF3577C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebPack.Gcp.CoreLib", "src\WebPack.Gcp.CoreLib\WebPack.Gcp.CoreLib.csproj", "{89D19D97-F993-4F9B-A232-2717BCF3577C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPack.Identity.Gcp.CoreLib", "src\WebPack.Identity.Gcp.CoreLib\WebPack.Identity.Gcp.CoreLib.csproj", "{7896CFC5-E73A-448D-B5E1-84B70756311F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{89D19D97-F993-4F9B-A232-2717BCF3577C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89D19D97-F993-4F9B-A232-2717BCF3577C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89D19D97-F993-4F9B-A232-2717BCF3577C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7896CFC5-E73A-448D-B5E1-84B70756311F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7896CFC5-E73A-448D-B5E1-84B70756311F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7896CFC5-E73A-448D-B5E1-84B70756311F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7896CFC5-E73A-448D-B5E1-84B70756311F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
