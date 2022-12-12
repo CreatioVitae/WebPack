@@ -39,11 +39,21 @@ public static class BasicAuthenticationExtensions {
         userName = null;
         password = null;
 
-        if (authorizationHeader.Parameter is null || authorizationHeader.Parameter.TryDecodeUtf8FromBase64String(out var decodedCredential) is false) {
+        return
+            authorizationHeader.Parameter is string nonNullParameter &&
+            TryGetBasicAuthorizationCredentialsFromAuthenticationHeaderValueParameter(nonNullParameter, out userName, out password);
+    }
+
+    public static bool TryGetBasicAuthorizationCredentialsFromAuthenticationHeaderValueParameter(string nonNullParameter, out string? userName, out string? password) {
+        userName = null;
+        password = null;
+
+        if (nonNullParameter.TryDecodeUtf8FromBase64String(out var decodedCredential) is false) {
             return false;
         }
 
-        if (decodedCredential.Split(new[] { CredentialSeparateMarker }, CredentialValidCount) is not string[] credential || credential.Length is not CredentialValidCount) {
+        if (decodedCredential.Split(new[] { CredentialSeparateMarker }, CredentialValidCount) is not string[] credential ||
+            credential.Length is not CredentialValidCount) {
             return false;
         }
 
@@ -51,5 +61,4 @@ public static class BasicAuthenticationExtensions {
         password = credential[PasswordIndex];
         return true;
     }
-
 }
