@@ -3,18 +3,18 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.1.2</Version>
+    <Version>0.1.3</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
     <Description>ASP.NET Core Identity Easy setting Package Case Gcp Way.</Description>
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
     <PackageReleaseNotes>Add  Force Basic Authentication Structure. (Case pub/sub ...  )</PackageReleaseNotes>
-    <PackageTags>basic-authentication-setup-support-case-using-gcp</PackageTags>
+    <PackageTags>upgrade WebPack.Identity.CoreLib.</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="WebPack.Identity.CoreLib" Version="0.5.3" />
+    <PackageReference Include="WebPack.Identity.CoreLib" Version="0.5.4" />
   </ItemGroup>
 
 </Project>
