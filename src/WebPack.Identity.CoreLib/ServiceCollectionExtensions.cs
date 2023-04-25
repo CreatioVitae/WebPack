@@ -47,7 +47,7 @@ public static class ServiceCollectionExtensions {
 
         services.AddScoped<ITokenAuthenticationService, TTokenAuthenticationService>();
 
-        services.AddAuthentication(schemeName).AddScheme<AuthenticationSchemeOptions, DefaultBasicAuthenticationHandler>(schemeName, null);
+        services.AddAuthentication(schemeName).AddScheme<AuthenticationSchemeOptions, DefaultTokenAuthenticationHandler>(schemeName, null);
 
         return services;
     }
