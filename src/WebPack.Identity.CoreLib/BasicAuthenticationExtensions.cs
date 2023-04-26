@@ -1,5 +1,4 @@
 using System.Net.Http.Headers;
-using static Microsoft.AspNetCore.Authentication.HttpHeaderConsts;
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.AspNetCore.Authentication;
@@ -26,12 +25,6 @@ public static class BasicAuthenticationExtensions {
             authHeader.TryGetBasicAuthenticationCredential(out userName, out password);
     }
 
-    static bool ContainsAuthorizationHeader(this IHeaderDictionary headers) =>
-        headers.ContainsKey(AuthorizationHeaderKey);
-
-    static bool TryGetAuthorizationHeader(this IHeaderDictionary headers, [NotNullWhen(true)] out AuthenticationHeaderValue? authorizationHeader) =>
-        AuthenticationHeaderValue.TryParse(headers[AuthorizationHeaderKey], out authorizationHeader);
-
     static bool IsBasicAuthentication(this AuthenticationHeaderValue authorizationHeader) =>
         authorizationHeader.Scheme.Equals(AuthorizationType.Basic, StringComparison.OrdinalIgnoreCase);
 
@@ -52,8 +45,7 @@ public static class BasicAuthenticationExtensions {
             return false;
         }
 
-        if (decodedCredential.Split(new[] { CredentialSeparateMarker }, CredentialValidCount) is not string[] credential ||
-            credential.Length is not CredentialValidCount) {
+        if (decodedCredential.Split(new[] { CredentialSeparateMarker }, CredentialValidCount) is not { Length: CredentialValidCount } credential) {
             return false;
         }
 
