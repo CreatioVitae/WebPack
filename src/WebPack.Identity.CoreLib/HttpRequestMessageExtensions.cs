@@ -11,4 +11,13 @@ public static class HttpRequestMessageExtensions {
 
         return requestMessage;
     }
+
+    public static HttpRequestMessage ApplyTokenAuthorizationHeader(this HttpRequestMessage requestMessage, string token) {
+        requestMessage.Headers.Authorization = new AuthenticationHeaderValue(
+            AuthorizationType.Bearer,
+            token
+        );
+
+        return requestMessage;
+    }
 }
