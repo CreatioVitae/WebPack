@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.10.1</Version>
+    <Version>0.10.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
@@ -12,7 +12,7 @@
       Include Default Builder;
     </Description>
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
-    <PackageReleaseNotes>upgrade ConfigureSettings.(add IgnoreForceRedirectsToHttps)</PackageReleaseNotes>
+    <PackageReleaseNotes>upgrade package.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>Include Default Builder For DotNet Core</PackageTags>
   </PropertyGroup>
@@ -21,13 +21,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Serilog" Version="2.12.0" />
-    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
     <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
-    <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="8.4.1" />
-    <PackageReference Include="Serilog.Settings.Configuration" Version="3.4.0" />
+    <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="9.0.1" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="7.0.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="Serilog.Sinks.GoogleCloudLogging" Version="5.0.0" />
-    <PackageReference Include="BclExtensionPack.CoreLib" Version="0.10.2" />
+    <PackageReference Include="BclExtensionPack.CoreLib" Version="0.10.3" />
   </ItemGroup>
   <ItemGroup>
     <None Include="docs\README.md" Pack="true" PackagePath="\" />

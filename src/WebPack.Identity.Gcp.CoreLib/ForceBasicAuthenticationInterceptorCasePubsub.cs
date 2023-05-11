@@ -9,11 +9,7 @@ public class ForceBasicAuthenticationInterceptorCasePubSub : IBasicAuthenticatio
     public static readonly string QueryKeyName = "force-basic-authentication-case-pub-sub-key";
 
     public static (bool interruptResult, string? userName, string? password) Interrupt(HttpRequest httpRequest) {
-        if (httpRequest.Query.TryGetValue(QueryKeyName, out var queryVal) is false) {
-            return (false, null, null);
-        }
-
-        if (queryVal.FirstOrDefault() is not string nonNull) {
+        if (httpRequest.Query.TryGetValue(QueryKeyName, out var queryVal) is false || queryVal.FirstOrDefault() is not { } nonNull) {
             return (false, null, null);
         }
 
