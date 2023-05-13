@@ -1,3 +1,4 @@
+// ReSharper disable once CheckNamespace
 namespace Microsoft.AspNetCore.Mvc;
 
 public static class ControllerBaseExtensions {
