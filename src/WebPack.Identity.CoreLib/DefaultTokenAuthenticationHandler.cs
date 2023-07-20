@@ -21,9 +21,7 @@ public class DefaultTokenAuthenticationHandler : AuthenticationHandler<Authentic
         (_tokenAuthenticationService, _tokenAuthenticationInterceptor) = (tokenAuthenticationService, tokenAuthenticationInterceptor);
 
     protected override async Task<AuthenticateResult> HandleAuthenticateAsync() {
-        if (_tokenAuthenticationInterceptor.InterruptOnBeginnings is not null) {
-            _tokenAuthenticationInterceptor.InterruptOnBeginnings(Request);
-        }
+        _tokenAuthenticationInterceptor.InterruptOnBeginnings?.Invoke(Request);
 
         if (Context.GetEndpoint()?.Metadata?.GetMetadata<IAllowAnonymous>() is not null) {
             return AuthenticateResult.NoResult();
