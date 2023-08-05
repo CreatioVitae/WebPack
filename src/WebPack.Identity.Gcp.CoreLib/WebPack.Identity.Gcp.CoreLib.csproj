@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.3.3</Version>
+    <Version>0.3.4</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="WebPack.Identity.CoreLib" Version="0.9.1" />
+    <PackageReference Include="WebPack.Identity.CoreLib" Version="0.9.2" />
   </ItemGroup>
 
 </Project>
