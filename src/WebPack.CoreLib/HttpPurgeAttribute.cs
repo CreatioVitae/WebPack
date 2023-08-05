@@ -5,7 +5,7 @@ using System.Net.Http;
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.AspNetCore.Mvc;
-internal class HttpPurgeAttribute : HttpMethodAttribute {
+public class HttpPurgeAttribute : HttpMethodAttribute {
     private static readonly IEnumerable<string> SupportedMethods = new[] { ExtendedHttpMethod.PurgeMethodName };
 
     /// <summary>
