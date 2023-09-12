@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.13.1.2</Version>
+    <Version>0.14.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
@@ -12,7 +12,7 @@
       Include Default Builder;
     </Description>
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
-    <PackageReleaseNotes>Add HttpPurgeAttribute.</PackageReleaseNotes>
+    <PackageReleaseNotes>Upgrade package.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>Include Default Builder For DotNet Core</PackageTags>
   </PropertyGroup>
@@ -24,10 +24,10 @@
     <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
     <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
     <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="9.0.3" />
-    <PackageReference Include="Serilog.Settings.Configuration" Version="7.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="7.0.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="Serilog.Sinks.GoogleCloudLogging" Version="5.0.0" />
-    <PackageReference Include="BclExtensionPack.CoreLib" Version="0.12.1" />
+    <PackageReference Include="BclExtensionPack.CoreLib" Version="0.13.1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="docs\README.md" Pack="true" PackagePath="\" />
