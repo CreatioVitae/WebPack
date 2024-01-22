@@ -20,9 +20,6 @@ public class HttpPurgeAttribute : HttpMethodAttribute {
     /// </summary>
     /// <param name="template">The route template. May not be null.</param>
     public HttpPurgeAttribute([StringSyntax("Route")] string template)
-        : base(SupportedMethods, template) {
-        if (template == null) {
-            throw new ArgumentNullException(nameof(template));
-        }
-    }
+        : base(SupportedMethods, template) =>
+        ArgumentNullException.ThrowIfNull(template);
 }
