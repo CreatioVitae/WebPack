@@ -1,7 +1,8 @@
+// ReSharper disable once CheckNamespace
 namespace Microsoft.AspNetCore.Http;
 
 public static class PathStringExtensions {
-    static readonly char[] Slash = { '/' };
+    static readonly char[] Slash = ['/'];
 
     public static string WithoutLeadingSlash(this PathString pathString, bool forceWithTrailingSlash) {
         ArgumentNullException.ThrowIfNull(pathString.Value);

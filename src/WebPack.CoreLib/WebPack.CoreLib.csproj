@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.15.1</Version>
+    <Version>0.16.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
@@ -12,7 +12,7 @@
       Include Default Builder;
     </Description>
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
-    <PackageReleaseNotes>Upgrade package.</PackageReleaseNotes>
+    <PackageReleaseNotes>Upgrade dotnet.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>Include Default Builder For DotNet Core</PackageTags>
   </PropertyGroup>
@@ -20,14 +20,14 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Serilog" Version="3.0.1" />
-    <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
-    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="2.0.0" />
     <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="9.0.3" />
-    <PackageReference Include="Serilog.Settings.Configuration" Version="7.0.1" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="Serilog.Sinks.GoogleCloudLogging" Version="5.0.0" />
-    <PackageReference Include="BclExtensionPack.CoreLib" Version="0.14.1" />
+    <PackageReference Include="BclExtensionPack.CoreLib" Version="0.15.1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="docs\README.md" Pack="true" PackagePath="\" />
