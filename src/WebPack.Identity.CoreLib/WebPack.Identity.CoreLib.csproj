@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>0.9.4</Version>
+    <Version>0.10.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Vitae</Authors>
     <Company>Vitae</Company>
     <Description>ASP.NET Core Identity Easy setting Package</Description>
     <PackageProjectUrl>https://github.com/CreatioVitae/WebPack</PackageProjectUrl>
-    <PackageReleaseNotes>Upgrade package.</PackageReleaseNotes>
+    <PackageReleaseNotes>Upgrade dotnet.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>basic-authentication-setup-support</PackageTags>
   </PropertyGroup>
@@ -17,7 +17,7 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="WebPack.CoreLib" Version="0.15.1" />
+    <PackageReference Include="WebPack.CoreLib" Version="0.16.1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="docs\README.md" Pack="true" PackagePath="\" />
