@@ -33,7 +33,7 @@ public static class BasicAuthenticationExtensions {
         password = null;
 
         return
-            authorizationHeader.Parameter is string nonNullParameter &&
+            authorizationHeader.Parameter is { } nonNullParameter &&
             TryGetBasicAuthorizationCredentialsFromAuthenticationHeaderValueParameter(nonNullParameter, out userName, out password);
     }
 
@@ -45,7 +45,7 @@ public static class BasicAuthenticationExtensions {
             return false;
         }
 
-        if (decodedCredential.Split(new[] { CredentialSeparateMarker }, CredentialValidCount) is not { Length: CredentialValidCount } credential) {
+        if (decodedCredential.Split([CredentialSeparateMarker], CredentialValidCount) is not { Length: CredentialValidCount } credential) {
             return false;
         }
 
