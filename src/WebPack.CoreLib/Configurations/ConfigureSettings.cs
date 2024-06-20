@@ -7,4 +7,6 @@ public class ConfigureSettings {
     public PathBase? PathBase { get; init; }
 
     public bool IgnoreForceRedirectsToHttps { get; init; } = false;
+
+    public bool ResponseCompressionEnable { get; init; } = false;
 }
